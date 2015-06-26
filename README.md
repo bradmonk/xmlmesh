@@ -53,23 +53,23 @@ xmlmesh is a Matlab function to format triangulated mesh data for xml file outpu
 ## Example
 -----------------------------------------------------
 
-% Create 2D triangulated mesh
+Create 2D triangulated mesh
+
     XY = randn(10,2);
     TR2D = delaunayTriangulation(XY);
     vrts = TR2D.Points;
     tets = TR2D.ConnectivityList;
-
     xmlmesh(vrts,tets,'xmlmesh_2D.xml')
 
 
-% Create 3D triangulated mesh
+Create 3D triangulated mesh
+
     d = [-5 8];
     [x,y,z] = meshgrid(d,d,d); % a cube
     XYZ = [x(:) y(:) z(:)];
     TR3D = delaunayTriangulation(XYZ);
     vrts = TR3D.Points;
     tets = TR3D.ConnectivityList;
-
     xmlmesh(vrts,tets,'xmlmesh_3D.xml')
 
 
@@ -77,7 +77,7 @@ xmlmesh is a Matlab function to format triangulated mesh data for xml file outpu
 --------------------------
 
 
-% From 2D xml mesh file: xmlmesh_2D.xml
+From 2D xml mesh file: xmlmesh_2D.xml
 
     <?xml version="1.0" encoding="utf-8"?>
     <dolfin xmlns:dolfin="bradleymonk.com/xmlmesh">
@@ -113,7 +113,7 @@ xmlmesh is a Matlab function to format triangulated mesh data for xml file outpu
 
 
 
-% From 3D xml mesh file: xmlmesh_3D.xml
+From 3D xml mesh file: xmlmesh_3D.xml
 
     <?xml version="1.0" encoding="utf-8"?>
     <dolfin xmlns:dolfin="bradleymonk.com/xmlmesh">
@@ -144,15 +144,15 @@ xmlmesh is a Matlab function to format triangulated mesh data for xml file outpu
 
 ## See Also
 -----------------------------------------------------
-http://bradleymonk.com/xmlmesh
-http://fenicsproject.org
->> web(fullfile(docroot, 'matlab/math/triangulation-representations.html'))
+* http://bradleymonk.com/xmlmesh
+* http://fenicsproject.org
+* web(fullfile(docroot, 'matlab/math/triangulation-representations.html'))
 
 
 ## Attribution
 -----------------------------------------------------
-% Created by: Bradley Monk
-% email: brad.monk@gmail.com
-% website: bradleymonk.com
-% 2015.06.25
+* Created by: Bradley Monk
+* email: brad.monk@gmail.com
+* website: bradleymonk.com
+* 2015.06.25
 
